@@ -9,6 +9,10 @@ configurations.all {
     }
 }
 
+repositories {
+    jcenter()
+}
+
 dependencies {
     compile 'org.jetbrains.kotlin:kotlin-stdlib'
 }
