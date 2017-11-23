@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+configurations.all {
+    resolutionStrategy.eachDependency {
+        if (it.requested.group == "org.jetbrains.kotlin" && it.requested.version.isEmpty()) {
+            it.useVersion("1.1.60")
+        }
+    }
+}
+
+dependencies {
+    compile 'org.jetbrains.kotlin:kotlin-stdlib'
+}
